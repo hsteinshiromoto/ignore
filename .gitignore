@@ -1,10 +1,53 @@
-# Created by https://www.toptal.com/developers/gitignore/api/tex,latex,linux,macos,python,dbeaver,pycharm,windows,jupyternotebooks,visualstudiocode,obsidian
-# Edit at https://www.toptal.com/developers/gitignore?templates=tex,latex,linux,macos,python,dbeaver,pycharm,windows,jupyternotebooks,visualstudiocode,obsidian
 
-## Syncthing ##
+# Created by https://www.toptal.com/developers/gitignore/api/python,latex,macos,linux,pycharm,visualstudiocode,jupyternotebooks,tex,windows,dbeaver
+# Edit at https://www.toptal.com/developers/gitignore?templates=python,latex,macos,linux,pycharm,visualstudiocode,jupyternotebooks,tex,windows,dbeaver
 
-.stfolder/
-.stversions/
+*.log
+quartz/
+
+*.mdb
+
+### Python ###
+
+Dockerfile
+Licenses.md
+personal.code-workspace
+rtd.txt
+
+### File Extensions ###
+
+.obsidian/workspace*.json
+.obsidian/plugins/*/*.sync-conflict*
+# *.pdf
+
+### Obsidian ###
+**/.obsidian/app.json
+**/.obsidian/appearance.json
+**/.obsidian/workspace*.json
+**/.obsidian/plugins/make-md/**
+**/.obsidian/plugins/recent-files-obsidian/data.json
+**/.obsidian/plugins/**/styles.css
+**/.obsidian/**/manifest.json
+**/.obsidian/plugins/**/main.js
+
+# Syncthing conflict copies and duplicates anywhere under .obsidian
+**/.obsidian/**/*.sync-conflict-*
+**/.obsidian/* 2.json
+
+# Per-device UI state and auto-generated files
+**/.obsidian/graph.json
+**/.obsidian/switcher.json
+**/.obsidian/backlink.json
+**/.obsidian/core-plugins-migration.json
+
+# Plugin data files containing credentials (API keys, OAuth tokens)
+**/.obsidian/plugins/obsidian-local-rest-api/data.json
+**/.obsidian/plugins/google-calendar/data.json
+
+### Syncthing ###
+
+.stfolder
+.stversions/*
 
 ### DBeaver ###
 # ide config file
@@ -49,7 +92,7 @@ ipython_config.py
 # *.pdf
 
 ## Generated if empty string is given at "Please type another file name for output:"
-.pdf
+# .pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
@@ -138,16 +181,9 @@ acs-*.bib
 *.glsdefs
 *.lzo
 *.lzs
-*.slg
-*.slo
-*.sls
 
 # uncomment this for glossaries-extra (will ignore makeindex's style files!)
 # *.ist
-
-# gnuplot
-*.gnuplot
-*.table
 
 # gnuplottex
 *-gnuplottex-*
@@ -223,9 +259,6 @@ _minted*
 # scrwfile
 *.wrt
 
-# svg
-svg-inkscape/
-
 # sympy
 *.sout
 *.sympy
@@ -249,9 +282,6 @@ pythontex-files-*/
 *.dpth
 *.md5
 *.auxlock
-
-# titletoc
-*.ptc
 
 # todonotes
 *.tdo
@@ -351,7 +381,7 @@ TSWLatexianTemp*
 
 ### macOS ###
 # General
-.DS_Store
+*.DS_Store
 .AppleDouble
 .LSOverride
 
@@ -377,15 +407,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
-### macOS Patch ###
-# iCloud generated files
-*.icloud
-
-### Obsidian ###
-# Workspace json file
-
-.obsidian/workspace*.json 
 
 ### PyCharm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
@@ -451,9 +472,6 @@ atlassian-ide-plugin.xml
 # Cursive Clojure plugin
 .idea/replstate.xml
 
-# SonarLint plugin
-.idea/sonarlint/
-
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
 crashlytics.properties
@@ -495,10 +513,6 @@ fabric.properties
 # CodeStream plugin
 # https://plugins.jetbrains.com/plugin/12206-codestream
 .idea/codestream.xml
-
-# Azure Toolkit for IntelliJ plugin
-# https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij
-.idea/**/azureSettings.xml
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -593,22 +607,7 @@ target/
 #   install all needed dependencies.
 #Pipfile.lock
 
-# poetry
-#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
-#   commonly ignored for libraries.
-#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
-#poetry.lock
-
-# pdm
-#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
-#pdm.lock
-#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
-#   in version control.
-#   https://pdm.fming.dev/#use-with-ide
-.pdm.toml
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
 __pypackages__/
 
 # Celery stuff
@@ -651,23 +650,6 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
-
-### Python Patch ###
-# Poetry local configuration file - https://python-poetry.org/docs/configuration/#local-configuration
-poetry.toml
-
-# ruff
-.ruff_cache/
-
-# LSP config files
-pyrightconfig.json
-
 ### TeX ###
 
 # these rules might exclude image files for figures etc.
@@ -708,8 +690,6 @@ pyrightconfig.json
 # uncomment this for glossaries-extra (will ignore makeindex's style files!)
 # *.ist
 
-# gnuplot
-
 # gnuplottex
 
 # gregoriotex
@@ -746,8 +726,6 @@ pyrightconfig.json
 
 # scrwfile
 
-# svg
-
 # sympy
 
 # pdfcomment
@@ -759,8 +737,6 @@ pyrightconfig.json
 # thmtools
 
 # TikZ & PGF
-
-# titletoc
 
 # todonotes
 
@@ -819,13 +795,10 @@ pyrightconfig.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-!.vscode/*.code-snippets
+*.code-workspace
 
 # Local History for Visual Studio Code
 .history/
-
-# Built Visual Studio Code Extensions
-*.vsix
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
@@ -858,7 +831,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/tex,latex,linux,macos,python,dbeaver,pycharm,windows,jupyternotebooks,visualstudiocode,
-
-
+# End of https://www.toptal.com/developers/gitignore/api/python,latex,macos,linux,pycharm,visualstudiocode,jupyternotebooks,tex,windows,dbeaver
 
